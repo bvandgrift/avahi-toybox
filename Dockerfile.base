@@ -1,0 +1,18 @@
+FROM ubuntu:18.04
+
+RUN mkdir -p /var/run/dbus && \
+  apt-get update && apt-get install -y \
+  avahi-daemon \
+  avahi-discover \
+  avahi-utils \
+  libnss-mdns \
+  mdns-scan
+RUN service dbus restart
+RUN service avahi-daemon restart
+
+EXPOSE 5353/udp
+
+COPY services/couchbase.service /etc/avahi/services/couchbase.service
+COPY scripts/service-browser.sh service-browser.sh
+
+CMD ["./service-browser.sh"]

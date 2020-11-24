@@ -1,0 +1,23 @@
+version: "3.7"
+
+services:
+  kiosk1:
+    build:
+      context: .
+      dockerfile: Dockerfile.base
+    hostname: 'kiosk-1'
+  kiosk2:
+    build:
+      context: .
+      dockerfile: Dockerfile.base
+    hostname: 'kiosk-2'
+  kiosk3:
+    build:
+      context: .
+      dockerfile: Dockerfile.base
+    hostname: 'kiosk-3'
+  kiosk4:
+    build:
+      context: .
+      dockerfile: Dockerfile.base
+    hostname: 'kiosk-4'

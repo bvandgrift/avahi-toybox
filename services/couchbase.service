@@ -1,0 +1,53 @@
+<?xml version="1.0" standalone='no'?><!--*-nxml-*-->
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+<service-group>
+  <name replace-wildcards="yes">%h couchbase services</name>
+  <service>
+    <type>_couchbase_rest._tcp</type>
+    <port>8091</port>
+  </service>
+  <service>
+    <type>_couchbase_rest-ssl._tcp</type>
+    <port>18091</port>
+  </service>
+  <service>
+    <type>_couchbase_capi._tcp</type>
+    <port>8092</port>
+  </service>
+  <service>
+    <type>_couchbase_capi-ssl._tcp</type>
+    <port>18092</port>
+  </service>
+  <service>
+    <type>_couchbase_query._tcp</type>
+    <port>8093</port>
+  </service>
+  <service>
+    <type>_couchbase_query-ssl._tcp</type>
+    <port>18093</port>
+  </service>
+  <service>
+    <type>_couchbase_fts._tcp</type>
+    <port>8094</port>
+  </service>
+  <service>
+    <type>_couchbase_fts-ssl._tcp</type>
+    <port>18094</port>
+  </service>
+  <service>
+    <type>_couchbase_cbas._tcp</type>
+    <port>8095</port>
+  </service>
+  <service>
+    <type>_couchbase_cbas-ssl._tcp</type>
+    <port>18095</port>
+  </service>
+  <service>
+    <type>_couchbase_eventing._tcp</type>
+    <port>8096</port>
+  </service>
+  <service>
+    <type>_couchbase_eventing-ssl._tcp</type>
+    <port>18096</port>
+  </service>
+</service-group>
